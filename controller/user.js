@@ -51,7 +51,8 @@ export const register = async (req, res, next) => {
 export const getMyProfile = (req, res) => {
   res.status(200).json({
     success: true,
-    message: "haa dost ho gya done",
+    user: req.user,
+   
   });
 };
 
@@ -65,6 +66,6 @@ export const logout = (req, res) => {
   })
   .json({
     success: true,
-    user: req.user,
+    message: "haa dost ho gya done",
   });
 };
